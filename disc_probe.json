@@ -1,0 +1,29 @@
+{
+  "cue_path": "C:\\RecompDev\\Discs\\Hogs of War (Europe)\\Hogs of War (Europe).cue",
+  "cue_name": "Hogs of War (Europe).cue",
+  "bin_name": "Hogs of War (Europe) (Track 1).bin",
+  "track_count": 3,
+  "data_track_size": 469795536,
+  "data_track_md5": "d82fe1b02d954f533e45bca448b49bfd",
+  "data_track_sha1": "3ec6502707380126127d174d659d4d80c707202b",
+  "data_track_crc32": "202fd4d9",
+  "boot_exe": "SLES_010.41",
+  "serial": "SLES-01041",
+  "serial_exe": "SLES_010.41",
+  "volume_id": "",
+  "display_name": "MyFirstPSXPort",
+  "load_address": "0x80010000",
+  "entry_pc": "0x800178CC",
+  "text_size": "0x000E7800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "94f763d3592e839da8fbe0d5a93c2464df7e2043727807a9bb7cc58e59d106fa",
+  "boot_exe_sha256": "05a6c398b17763980b9179ad20593650555f77bbef234ed0a9a48eaf649a52a3",
+  "seed_count": 264,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

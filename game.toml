@@ -1,0 +1,54 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "MyFirstPSXPort"
+id = "SLES-01041"
+players = 1
+exe = "disc/SLES_010.41"
+disc = "C:\\RecompDev\\Discs\\Hogs of War (Europe)\\Hogs of War (Europe).cue"
+load_address = "0x80010000"
+entry_pc = "0x800178CC"
+text_size = "0x000E7800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Hogs of War (Europe) (Track 1).bin"
+cue_name = "Hogs of War (Europe).cue"
+boot_exe = "SLES_010.41"
+known_sizes = [469795536]
+known_md5 = [
+  "d82fe1b02d954f533e45bca448b49bfd",
+]
+known_sha1 = [
+  "3ec6502707380126127d174d659d4d80c707202b",
+]
+known_crc32 = [
+  "202fd4d9",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "MyFirstPSXPort Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 3
+required_disc_fp = "94f763d3592e839da8fbe0d5a93c2464df7e2043727807a9bb7cc58e59d106fa"

@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "MyFirstPSXPort",
+    "id": "SLES-01041",
+    "boot_exe": "SLES_010.41"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Hogs of War (Europe).cue",
+    "bin_name": "Hogs of War (Europe) (Track 1).bin",
+    "track_counts": [
+      3
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 469795536,
+      "md5": "d82fe1b02d954f533e45bca448b49bfd",
+      "sha1": "3ec6502707380126127d174d659d4d80c707202b",
+      "crc32": "202fd4d9"
+    },
+    "disc_fp": "94f763d3592e839da8fbe0d5a93c2464df7e2043727807a9bb7cc58e59d106fa"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800178CC",
+    "text_size": "0x000E7800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 264,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
